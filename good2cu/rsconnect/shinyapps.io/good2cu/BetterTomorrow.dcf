@@ -1,0 +1,12 @@
+name: BetterTomorrow
+title: BetterTomorrow
+username:
+account: good2cu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 894252
+bundleId: 2078301
+url: https://good2cu.shinyapps.io/BetterTomorrow/
+when: 1557660637.91074
+asMultiple: FALSE
+asStatic: FALSE
