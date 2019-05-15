@@ -1,0 +1,12 @@
+name: dietician
+title: dietician
+username:
+account: good2cu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 925077
+bundleId: 2078499
+url: https://good2cu.shinyapps.io/dietician/
+when: 1557672056.64815
+asMultiple: FALSE
+asStatic: FALSE
