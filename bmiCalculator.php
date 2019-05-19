@@ -22,7 +22,7 @@ echo '<form id="bmi-form" style="color:black;">
 
        
     
-    <span><button type="button" id="button-calculate" style="border-radius:5px; margin-top: 20px; background-color:#b1d6bb">calculate your bmi</button></span>
+    <span><button type="button" id="button-calculate" style="border-radius:5px; margin-top: 20px; background-color:#b1d6bb">Calculate your bmi</button></span>
 
 
 <div id="result-content" style="display: none;background-color:#a9afcc">
