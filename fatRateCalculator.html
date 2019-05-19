@@ -1,0 +1,90 @@
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  jQuery("body").on("click", "#fat-calculte", function(){
+    ele = $("#input-breakfast")
+    var input_value = ele.val()
+    if(input_value == "" || isNaN(input_value) || parseInt(input_value) <= -1 || parseInt(input_value) > 7){
+      ele.siblings(".msg").html("please input an number greater than 0 and less than 7")
+      ele.siblings(".msg").css("display", "inline-block")
+      return
+    }
+
+    ele = $("#input-lunch")
+    var input_value = ele.val()
+    if(input_value == "" || isNaN(input_value) || parseInt(input_value) <= -1 || parseInt(input_value) > 7){
+      ele.siblings(".msg").html("please input an number greater than 0 and less than 7")
+      ele.siblings(".msg").css("display", "inline-block")
+      return
+    }
+
+    ele = $("#input-dinner")
+    var input_value = ele.val()
+    if(input_value == "" || isNaN(input_value) || parseInt(input_value) <= -1 || parseInt(input_value) > 7){
+      ele.siblings(".msg").html("please input an number greater than 0 and less than 7")
+      ele.siblings(".msg").css("display", "inline-block")
+      return
+    }
+
+
+    var breakfast = $("#input-breakfast").val();
+    var lunch = $("#input-lunch").val();
+    var dinner = $("#input-dinner").val();
+    var fat_rate = 0.3 * parseInt(breakfast) + 0.5 * parseInt(lunch) + 0.6 * parseInt(dinner);
+    fat_rate = (Math.round(fat_rate * 1000) / 100) + '%';
+
+    $("#fat-result-content").html("This week your had " + fat_rate +" of fat intake");
+    $("#fat-result-content").css("display", "block");
+
+    
+  })
+})
+</script>
+<style type="text/css">
+.Row
+{
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+.Column
+{
+    display: table-cell;
+}
+</style>
+        <table class="Row" style="height: 400px; width:1200px">
+  <tr>
+    <td><div id="forwm_container" class="Column" style="height: 400px; width:600px">
+      <form id="input-form" style="color:black;">
+        <h3 style="margin-bottom: 10px">This calculates the fat percentage of junk food intake in a week</h3>
+        <span>Enter number of times your kids eat junk food in a week</span>
+        <div style="color:blue;">
+            <span>Breakfast</span>
+            <input type="text" id="input-breakfast" name="breakfast" class="fat-number-input" style=" padding: 0px 0px 0px 10px">
+            <span class="msg" style="display: none; color: blue"></span>
+        </div>
+        <div style="color:blue;">
+            <span>Lunch</span>
+            <input type="text" id="input-lunch" name="lunch" class="fat-number-input" style=" padding: 0px 0px 0px 10px">
+            <span class="msg" style="display: none; color: blue"></span>
+        </div>
+        <div style="color:blue;">
+            <span>Dinner</span>
+            <input type="text" id="input-dinner" name="dinner" class="fat-number-input" style=" padding: 0px 0px 0px 10px">
+            <span class="msg" style="display: none; color: blue"></span>
+        </div>
+        <div id="fat-result-content" style="display: none;color:blue;">
+	        <span id="res-fat"></span>
+	    </div>
+        <button type="button" id="fat-calculte" style="border-radius:5px; margin-top: 20px; color:green;">Click here to find your fat percentage</button>
+      </form>
+
+    </div></td>
+    <td>
+      <div id="container" class="Column" style="height: 400px; width:600px">
+      </div>
+    </td>
+  </tr>
+</table>
+
